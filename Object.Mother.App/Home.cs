@@ -1,4 +1,6 @@
-﻿namespace Object.Mother.Test
+﻿using Object.Mother.Test;
+
+namespace Object.Mother.App
 {
     public class Home
     {

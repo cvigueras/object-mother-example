@@ -1,3 +1,4 @@
+using Object.Mother.App;
 using Object.Mother.Test.Fixtures;
 
 namespace Object.Mother.Test
