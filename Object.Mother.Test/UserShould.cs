@@ -16,5 +16,20 @@ namespace Object.Mother.Test
             Assert.IsTrue(string.Equals(message, "Aplicación web solo para personas mayores de edad", 
                 StringComparison.OrdinalIgnoreCase));
         }
+
+        [Test]
+        public void get_message_over_eighteen_under_thirty_years()
+        {
+            //Given
+            var givenUserOverEighteenUnderThirty = User.Create("Pepito Grillo", 29);
+
+            //When
+            var home = new Home();
+            var message = home.Access(givenUserOverEighteenUnderThirty);
+
+            //Then
+            Assert.IsTrue(string.Equals(message, "Consigue un descuento de 20€ en tu primer pedido",
+                StringComparison.OrdinalIgnoreCase));
+        }
     }
 }
