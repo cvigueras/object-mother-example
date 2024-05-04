@@ -31,5 +31,21 @@ namespace Object.Mother.Test
             Assert.IsTrue(string.Equals(message, "Consigue un descuento de 20€ en tu primer pedido",
                 StringComparison.OrdinalIgnoreCase));
         }
+
+
+        [Test]
+        public void get_message_over_thirty_under_sixty_five_years()
+        {
+            //Given
+            var givenUserOverEighteenOverThirtyUnderSixtyFive = User.Create("Pepito Grillo", 46);
+
+            //When
+            var home = new Home();
+            var message = home.Access(givenUserOverEighteenOverThirtyUnderSixtyFive);
+
+            //Then
+            Assert.IsTrue(string.Equals(message, "Consigue un descuento de 25€ en tu primer pedido",
+                StringComparison.OrdinalIgnoreCase));
+        }
     }
 }
