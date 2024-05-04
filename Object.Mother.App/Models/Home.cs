@@ -4,7 +4,11 @@
     {
         public string Access(User user)
         {
-            throw new NotImplementedException();
+            if(user.Age < 18)
+            {
+                return "Aplicación web solo para personas mayores de edad";
+            }
+            return string.Empty;
         }
     }
 }

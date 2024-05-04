@@ -2,8 +2,8 @@
 {
     public class User
     {
-        private static string Name;
-        private static int Age;
+        public string Name { get; set; }
+        public int Age { get; set; }
 
         public User(string name, int age)
         {
