@@ -1,3 +1,5 @@
+using Object.Mother.Test.Fixtures;
+
 namespace Object.Mother.Test
 {
     public partial class UserShould
@@ -6,7 +8,7 @@ namespace Object.Mother.Test
         public void get_message_under_eighteen_years()
         {
             //Given
-            var givenUserUnderEighteen = User.Create("Pepito Grillo", 16);
+            var givenUserUnderEighteen = UserMother.UserUnderEighteen();
 
             //When
             var home = new Home();
@@ -21,7 +23,7 @@ namespace Object.Mother.Test
         public void get_message_over_eighteen_under_thirty_years()
         {
             //Given
-            var givenUserOverEighteenUnderThirty = User.Create("Pepito Grillo", 29);
+            var givenUserOverEighteenUnderThirty = UserMother.UserOverEighteenUnderThirty();
 
             //When
             var home = new Home();
@@ -37,7 +39,7 @@ namespace Object.Mother.Test
         public void get_message_over_thirty_under_sixty_five_years()
         {
             //Given
-            var givenUserOverThirtyUnderSixtyFive = User.Create("Pepito Grillo", 46);
+            var givenUserOverThirtyUnderSixtyFive = UserMother.UserOverThirtyUnderSixtyFive();
 
             //When
             var home = new Home();
@@ -52,7 +54,7 @@ namespace Object.Mother.Test
         public void get_message_over_sixty_five_years()
         {
             //Given
-            var givenUserOverSixtyFive = User.Create("Pepito Grillo", 67);
+            var givenUserOverSixtyFive = UserMother.UserOverSixtyFive();
 
             //When
             var home = new Home();
