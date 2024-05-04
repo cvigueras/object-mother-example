@@ -12,6 +12,10 @@
             {
                 return "Consigue un descuento de 20€ en tu primer pedido";
             }
+            if(user.Age < 65)
+            {
+                return "Consigue un descuento de 25€ en tu primer pedido";
+            }
             return string.Empty;
         }
     }
