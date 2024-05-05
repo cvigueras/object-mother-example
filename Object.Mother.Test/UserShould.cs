@@ -5,6 +5,13 @@ namespace Object.Mother.Test
 {
     public partial class UserShould
     {
+        private Home home;
+        [SetUp]
+        public void Setup()
+        {
+            home = new Home();
+        }
+
         [Test]
         public void get_message_under_eighteen_years()
         {
@@ -12,11 +19,10 @@ namespace Object.Mother.Test
             var givenUserUnderEighteen = UserMother.UserUnderEighteen();
 
             //When
-            var home = new Home();
             var message = home.Access(givenUserUnderEighteen);
 
             //Then
-            Assert.IsTrue(string.Equals(message, "Aplicación web solo para personas mayores de edad", 
+            Assert.IsTrue(string.Equals(message, "Aplicación web solo para personas mayores de edad",
                 StringComparison.OrdinalIgnoreCase));
         }
 
@@ -27,7 +33,6 @@ namespace Object.Mother.Test
             var givenUserOverEighteenUnderThirty = UserMother.UserOverEighteenUnderThirty();
 
             //When
-            var home = new Home();
             var message = home.Access(givenUserOverEighteenUnderThirty);
 
             //Then
@@ -43,7 +48,6 @@ namespace Object.Mother.Test
             var givenUserOverThirtyUnderSixtyFive = UserMother.UserOverThirtyUnderSixtyFive();
 
             //When
-            var home = new Home();
             var message = home.Access(givenUserOverThirtyUnderSixtyFive);
 
             //Then
@@ -58,7 +62,6 @@ namespace Object.Mother.Test
             var givenUserOverSixtyFive = UserMother.UserOverSixtyFive();
 
             //When
-            var home = new Home();
             var message = home.Access(givenUserOverSixtyFive);
 
             //Then
