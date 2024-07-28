@@ -3,7 +3,7 @@ using Object.Mother.Test.Fixtures;
 
 namespace Object.Mother.Test
 {
-    public partial class UserShould
+    public class HomeShould
     {
         private Home home;
         [SetUp]
